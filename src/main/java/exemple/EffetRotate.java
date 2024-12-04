@@ -2,7 +2,8 @@ package exemple;
 
 import bandeau.Bandeau;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Font;
 
 public class EffetRotate {
     private int angle;
