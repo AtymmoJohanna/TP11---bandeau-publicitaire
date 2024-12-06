@@ -2,7 +2,6 @@ package exemple;
 
 import bandeau.Bandeau;
 
-import java.awt.Color;
 import java.awt.Font;
 
 public class EffetZoom extends Effet{
@@ -14,9 +13,11 @@ public class EffetZoom extends Effet{
 
     public void afficher(Bandeau bandeau){
         int size = bandeau.getFont().getSize();
-        for (int i = 0; i <= pourcentage/100; i += i) {
+        for (int i = 0; i <= size*pourcentage/100; i += 1) {
             bandeau.setFont(new Font("Dialog", Font.BOLD, size+i));
             bandeau.sleep(100);
         }
+        bandeau.sleep(1000);
+        bandeau.setFont(new Font("Dialog", Font.BOLD, size));
     }
 }

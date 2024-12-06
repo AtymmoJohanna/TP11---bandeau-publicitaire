@@ -10,4 +10,16 @@ public class EffetRepeter {
         this.effet = effet;
         this.scenario = scenario;
     }
+
+    public int getRepet(){
+        return repet;
+    }
+
+    public Effet getEffet(){
+        return effet;
+    }
+
+    public Scenario getScenario(){
+        return scenario;
+    }
 }

@@ -8,7 +8,27 @@ import java.awt.Font;
 public class ExempleDUtilisation {
 
     public static void main(String[] args) {
-        new ExempleDUtilisation().exemple();
+        //new ExempleDUtilisation().exemple();
+        Effet e1 = new EffetZoom(50);
+        Effet e2 = new EffetClignotant();
+        Effet e3 = new EffetJeuPendu();
+        Effet e4 = new EffetRotate(80);
+        Effet e5 = new EffetTeletype(); 
+
+        Scenario s1 = new Scenario();
+
+        s1.ajoutEffet(e4, 3);
+        s1.ajoutEffet(e1, 2);
+        s1.ajoutEffet(e5, 3);
+        s1.ajoutEffet(e3, 3);
+        s1.ajoutEffet(e5, 3);
+        s1.ajoutEffet(e2, 5);
+        s1.ajoutEffet(e5, 3);
+
+        Bandeau monBandeau = new Bandeau();
+        s1.afficher(monBandeau);
+
+
     }
 
     public void exemple() {

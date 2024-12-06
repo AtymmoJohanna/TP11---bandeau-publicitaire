@@ -6,11 +6,11 @@ public class EffetClignotant extends Effet{
 
     public void afficher(Bandeau bandeau){
         int blinkInterval = 500;
-        System.out.println(bandeau.toString());
+        String message = bandeau.getMessage();
         bandeau.sleep(blinkInterval);
-        System.out.print("\r");
+        bandeau.setMessage("");
         bandeau.sleep(blinkInterval);
-        System.out.print(bandeau.toString());
+        bandeau.setMessage(message);
     }
 
 }

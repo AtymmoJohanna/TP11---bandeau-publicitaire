@@ -5,10 +5,6 @@ import java.util.ArrayList;
 public class Scenario {
     private ArrayList<EffetRepeter> effets;
 
-    public Scenario(ArrayList<EffetRepeter> effets){
-        this.effets = effets;
-    }
-
     public Scenario(){
         this.effets = new ArrayList<>();
     }
@@ -18,6 +14,14 @@ public class Scenario {
     }
 
     public void afficher(Bandeau bandeau){
-
+        for(EffetRepeter effetRepeter: effets){
+            bandeau.sleep(1000);
+            Effet effet = effetRepeter.getEffet();
+            for(int i=0; i<effetRepeter.getRepet(); i++){
+                effet.afficher(bandeau);
+                bandeau.sleep(500);
+            }
+            
+        }
     }
 }

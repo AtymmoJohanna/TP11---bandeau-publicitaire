@@ -11,12 +11,10 @@ public class EffetJeuPendu extends Effet{
         for(int i =0; i< message.length(); i++){
             pendu= pendu +"_";
         }
-        System.out.print(pendu);
+        bandeau.setMessage(pendu);
 
         Random random = new Random();
         do{
-            System.out.print("\r");
-
             int j = random.nextInt(message.length());
 
             if(pendu.charAt(j)=='_'){
@@ -24,7 +22,8 @@ public class EffetJeuPendu extends Effet{
                 StringBuilder sb = new StringBuilder(pendu);
                 sb.setCharAt(j, lettre);
                 pendu = sb.toString();
-                System.out.print(pendu);
+                bandeau.setMessage(pendu);
+                bandeau.sleep(500);
             }
         }while(pendu.contains("_"));
     }
