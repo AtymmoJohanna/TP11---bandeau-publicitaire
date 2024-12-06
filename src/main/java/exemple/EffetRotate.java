@@ -5,7 +5,7 @@ import bandeau.Bandeau;
 import java.awt.Color;
 import java.awt.Font;
 
-public class EffetRotate {
+public class EffetRotate extends Effet{
     private int angle;
 
     public EffetRotate(int angle){

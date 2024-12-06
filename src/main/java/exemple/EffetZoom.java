@@ -5,7 +5,7 @@ import bandeau.Bandeau;
 import java.awt.Color;
 import java.awt.Font;
 
-public class EffetZoom {
+public class EffetZoom extends Effet{
     private int pourcentage;
 
     public EffetZoom(int pourcentage) {
